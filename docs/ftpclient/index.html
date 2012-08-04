@@ -1,0 +1,909 @@
+<!DOCTYPE html >
+
+<html lang="de" dir="ltr">
+<head>
+    <title>ringo-ftpclient/ftpclient - ringo-ftpclient</title>
+    <link rel="shortcut icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ringojs.org/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/jsdoc.css" />
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/jsdoc.js"></script>
+<script>
+$(document).ready(jsdocSetup);
+</script>
+
+</head>
+
+<body>
+<div class="wrap">
+
+    <div class="main">
+        <div class="content">
+                    <h1 class="modulename">Module ringo-ftpclient/ftpclient</h1>
+            <div class="fileoverview">
+                
+
+
+            </div>
+
+            <div class="classoverview">
+
+                <div class="classes">
+                                        <h2>Class <a href="#FtpClient" class="jsdoc-title">FtpClient</a></h2>
+                                        <div>
+                        <h3>Instance Methods</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#FtpClient.prototype.cd" class="jsdoc-title"> cd</a>(path, create)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.connect" class="jsdoc-title"> connect</a>()
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.disconnect" class="jsdoc-title"> disconnect</a>()
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.enableActiveMode" class="jsdoc-title"> enableActiveMode</a>()
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.enablePassiveMode" class="jsdoc-title"> enablePassiveMode</a>()
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.get" class="jsdoc-title"> get</a>(fileName, localPath)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.login" class="jsdoc-title"> login</a>(username, password)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.logout" class="jsdoc-title"> logout</a>()
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.ls" class="jsdoc-title"> ls</a>(path, filter)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.lsdir" class="jsdoc-title"> lsdir</a>(path)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.mkdir" class="jsdoc-title"> mkdir</a>(path)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.put" class="jsdoc-title"> put</a>(file, fileName)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.pwd" class="jsdoc-title"> pwd</a>()
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.rename" class="jsdoc-title"> rename</a>(from, to)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.rm" class="jsdoc-title"> rm</a>(fileName)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.rmdir" class="jsdoc-title"> rmdir</a>(path)
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.setAsciiMode" class="jsdoc-title"> setAsciiMode</a>()
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.setBinaryMode" class="jsdoc-title"> setBinaryMode</a>()
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#FtpClient.prototype.client" class="jsdoc-title"> client</a>
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.host" class="jsdoc-title"> host</a>
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.prototype.port" class="jsdoc-title"> port</a>
+                            </li>
+                            </ul>
+                    </div>
+                                        <div>
+                        <h3>Static Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#FtpClient.ASCII" class="jsdoc-title"> ASCII</a>
+                            </li>
+                                                        <li>
+                                <a href="#FtpClient.BINARY" class="jsdoc-title"> BINARY</a>
+                            </li>
+                            </ul>
+                    </div>
+                                        <h2>Class <a href="#FtpFileFilter" class="jsdoc-title">FtpFileFilter</a></h2>
+                                        <h2>Class <a href="#FtpsClient" class="jsdoc-title">FtpsClient</a></h2>
+                                        <div>
+                        <h3>Instance Properties</h3>
+                        <ul class="propertyoverview">
+                                                        <li>
+                                <a href="#FtpsClient.prototype.client" class="jsdoc-title"> client</a>
+                            </li>
+                                                        <li>
+                                <a href="#FtpsClient.prototype.host" class="jsdoc-title"> host</a>
+                            </li>
+                                                        <li>
+                                <a href="#FtpsClient.prototype.port" class="jsdoc-title"> port</a>
+                            </li>
+                            </ul>
+                    </div>
+                    </div>
+            </div>
+                <hr/>
+                <div class="details">
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient">
+                            <h3>
+                                <span class="itemtitle"><a id="FtpClient" href="#FtpClient" class="itemtitle itemname">FtpClient</a></span>
+                                <span class="itemtitle light">(host, port)</span></h3>
+                            <div>
+                                <p>Returns a newly created FtpClient instance</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">host</td>
+                                        <td>The host to connect to</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">port</td>
+                                        <td>Optional port (defaults to 21)</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>A newly created FtpClient instance</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.ASCII">
+                            <h3>
+                                <span class="itemtitle">FtpClient.<a id="FtpClient.ASCII" href="#FtpClient.ASCII" class="itemtitle itemname">ASCII</a></span>
+                                </h3>
+                            <div>
+                                <p>Constant for ASCII transfer mode</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.BINARY">
+                            <h3>
+                                <span class="itemtitle">FtpClient.<a id="FtpClient.BINARY" href="#FtpClient.BINARY" class="itemtitle itemname">BINARY</a></span>
+                                </h3>
+                            <div>
+                                <p>Constant for binary transfer mode</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.cd">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.cd" href="#FtpClient.prototype.cd" class="itemtitle itemname">cd</a></span>
+                                <span class="itemtitle light">(path, create)</span></h3>
+                            <div>
+                                <p>Changes the current working directory</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">path</td>
+                                        <td>The path to the new working directory</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Boolean</td>
+                                        <td class="paramname">create</td>
+                                        <td>If true the new working directory is created if it doesn't exist</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.client">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.client" href="#FtpClient.prototype.client" class="itemtitle itemname">client</a></span>
+                                </h3>
+                            <div>
+                                <p>The wrapped FTPClient instance</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.connect">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.connect" href="#FtpClient.prototype.connect" class="itemtitle itemname">connect</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Connects to the remote server</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.disconnect">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.disconnect" href="#FtpClient.prototype.disconnect" class="itemtitle itemname">disconnect</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Disconnects from the remote server</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.enableActiveMode">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.enableActiveMode" href="#FtpClient.prototype.enableActiveMode" class="itemtitle itemname">enableActiveMode</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Switches this client to active mode</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.enablePassiveMode">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.enablePassiveMode" href="#FtpClient.prototype.enablePassiveMode" class="itemtitle itemname">enablePassiveMode</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Switches this client to passive mode</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.get">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.get" href="#FtpClient.prototype.get" class="itemtitle itemname">get</a></span>
+                                <span class="itemtitle light">(fileName, localPath)</span></h3>
+                            <div>
+                                <p>Retrieves the file from the remote server and stores it locally</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">fileName</td>
+                                        <td>The name of the file to retrieve</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">localPath</td>
+                                        <td>The local path to store the file at. If it's a
+directory the file is stored therein.</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>String</td>
+                                        <td> The path to the local file</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.host">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.host" href="#FtpClient.prototype.host" class="itemtitle itemname">host</a></span>
+                                </h3>
+                            <div>
+                                <p>The FQDN or Ip-Address of the FTP-Server</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.login">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.login" href="#FtpClient.prototype.login" class="itemtitle itemname">login</a></span>
+                                <span class="itemtitle light">(username, password)</span></h3>
+                            <div>
+                                <p>Logs into the remote server using the credentials passed as argument</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">username</td>
+                                        <td>The username</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">password</td>
+                                        <td>The password</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if login was successful, false otherwise</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.logout">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.logout" href="#FtpClient.prototype.logout" class="itemtitle itemname">logout</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Logs out from the remote server and disconnects</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.ls">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.ls" href="#FtpClient.prototype.ls" class="itemtitle itemname">ls</a></span>
+                                <span class="itemtitle light">(path, filter)</span></h3>
+                            <div>
+                                <p>Lists the contents of the current working directory of this client</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">path</td>
+                                        <td>The path to the directory</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>org.apache.commons.net.ftp.FTPFileFilter</td>
+                                        <td class="paramname">filter</td>
+                                        <td>An optional file filter</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Array</td>
+                                        <td> An array containing org.apache.commons.net.ftp.FTPFile instances</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.lsdir">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.lsdir" href="#FtpClient.prototype.lsdir" class="itemtitle itemname">lsdir</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Returns an array containing subdirectories</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">path</td>
+                                        <td>The path to the parent directory</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Array</td>
+                                        <td> An array containing org.apache.commons.net.ftp.FTPFile instances</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.mkdir">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.mkdir" href="#FtpClient.prototype.mkdir" class="itemtitle itemname">mkdir</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Creates a directory</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">path</td>
+                                        <td>The name of the directory to create</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.port">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.port" href="#FtpClient.prototype.port" class="itemtitle itemname">port</a></span>
+                                </h3>
+                            <div>
+                                <p>The port to connect to</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.put">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.put" href="#FtpClient.prototype.put" class="itemtitle itemname">put</a></span>
+                                <span class="itemtitle light">(file, fileName)</span></h3>
+                            <div>
+                                <p>Stores the file passed as argument on the remote server, using an optional
+file name</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">file</td>
+                                        <td>The file to store on the remote server</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">fileName</td>
+                                        <td>Optional file name (defaults to the name of the file
+being transferred)</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.pwd">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.pwd" href="#FtpClient.prototype.pwd" class="itemtitle itemname">pwd</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Returns the current working directory</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>String</td>
+                                        <td> The current working directory</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.rename">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.rename" href="#FtpClient.prototype.rename" class="itemtitle itemname">rename</a></span>
+                                <span class="itemtitle light">(from, to)</span></h3>
+                            <div>
+                                <p>Renames a file on the remote server</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">from</td>
+                                        <td>The path of the file to rename</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">to</td>
+                                        <td>The path to rename the file to</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.rm">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.rm" href="#FtpClient.prototype.rm" class="itemtitle itemname">rm</a></span>
+                                <span class="itemtitle light">(fileName)</span></h3>
+                            <div>
+                                <p>Removes the file with the given name from the remote server</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">fileName</td>
+                                        <td>The name of the file</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.rmdir">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.rmdir" href="#FtpClient.prototype.rmdir" class="itemtitle itemname">rmdir</a></span>
+                                <span class="itemtitle light">(path)</span></h3>
+                            <div>
+                                <p>Removes the directory with the given name from the remote server</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">path</td>
+                                        <td>The path to the directory to remove</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.setAsciiMode">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.setAsciiMode" href="#FtpClient.prototype.setAsciiMode" class="itemtitle itemname">setAsciiMode</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Switches this client to ASCII transfer mode</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpClient.prototype.setBinaryMode">
+                            <h3>
+                                <span class="itemtitle">FtpClient.prototype.<a id="FtpClient.prototype.setBinaryMode" href="#FtpClient.prototype.setBinaryMode" class="itemtitle itemname">setBinaryMode</a></span>
+                                <span class="itemtitle light">()</span></h3>
+                            <div>
+                                <p>Switches this client to binary transfer mode</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td>Boolean</td>
+                                        <td> True if successful</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpFileFilter">
+                            <h3>
+                                <span class="itemtitle"><a id="FtpFileFilter" href="#FtpFileFilter" class="itemtitle itemname">FtpFileFilter</a></span>
+                                <span class="itemtitle light">(accept)</span></h3>
+                            <div>
+                                <p>Instances of this class represent a file filter</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>Function</td>
+                                        <td class="paramname">accept</td>
+                                        <td>A function called for each FTPFile. If this method
+returns true the file is part of a listing result</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>A newly created FtpFileFilter instance</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpsClient">
+                            <h3>
+                                <span class="itemtitle"><a id="FtpsClient" href="#FtpsClient" class="itemtitle itemname">FtpsClient</a></span>
+                                <span class="itemtitle light">(host, port)</span></h3>
+                            <div>
+                                <p>Returns a newly created FtpsClient instance</p>
+
+
+                            </div>
+                                                        <div>
+                                <h4>Parameters</h4>
+                                <table>
+                                                                        <tr>
+                                        <td>String</td>
+                                        <td class="paramname">host</td>
+                                        <td>The host to connect to</td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>Number</td>
+                                        <td class="paramname">port</td>
+                                        <td>Optional port (defaults to 990)</td>
+                                    </tr>
+                                    </table>
+                            </div>
+                                                        <div>
+                                <h4>Returns</h4>
+                                <table>
+                                    <tr>
+                                        <td></td>
+                                        <td>A newly created FtpsClient instance</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpsClient.prototype.client">
+                            <h3>
+                                <span class="itemtitle">FtpsClient.prototype.<a id="FtpsClient.prototype.client" href="#FtpsClient.prototype.client" class="itemtitle itemname">client</a></span>
+                                </h3>
+                            <div>
+                                <p>The wrapped FTPClient instance</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpsClient.prototype.host">
+                            <h3>
+                                <span class="itemtitle">FtpsClient.prototype.<a id="FtpsClient.prototype.host" href="#FtpsClient.prototype.host" class="itemtitle itemname">host</a></span>
+                                </h3>
+                            <div>
+                                <p>The FQDN or Ip-Address of the FTP-Server</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                                        <!-- tpl-docitem -->
+                    <div>
+                        <div class="docitem" docitem="FtpsClient.prototype.port">
+                            <h3>
+                                <span class="itemtitle">FtpsClient.prototype.<a id="FtpsClient.prototype.port" href="#FtpsClient.prototype.port" class="itemtitle itemname">port</a></span>
+                                </h3>
+                            <div>
+                                <p>The port to connect to</p>
+
+
+                            </div>
+                            </div>
+                        <hr/>
+                    </div>
+
+                    </div>
+            </div>
+        </div>
+
+
+
+    <div class="menu" style="margin-top: 1em; font-size: 13px;">
+    ringo-ftpclient<br/>
+        <a href="../index.html">Module list</a>
+    <a href="../index_all.html">Full index</a><br/>
+    <input id="jsdoc-leftnavsearch" type="search" placeholder="Filter module list" size="14">
+    <ul class="jsdoc-leftnav leftnav">
+                <li><a href="../ftpclient/index.html"> ringo-ftpclient/ftpclient </a></li>
+        </ul>
+
+</div>
+</div>
+</body>
+</html>
